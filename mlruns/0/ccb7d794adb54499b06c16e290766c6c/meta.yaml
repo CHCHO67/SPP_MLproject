@@ -1,0 +1,15 @@
+artifact_uri: file:///mnt/sdb/cch_workspace/SPP/MLproject/mlruns/0/ccb7d794adb54499b06c16e290766c6c/artifacts
+end_time: 1704432757253
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ccb7d794adb54499b06c16e290766c6c
+run_name: sneaky-robin-725
+run_uuid: ccb7d794adb54499b06c16e290766c6c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704432744399
+status: 4
+tags: []
+user_id: sysadm

@@ -1,0 +1,16 @@
+channels:
+- default
+dependencies:
+- python=3.10.13
+- pip<=23.3.1
+- pip:
+  - mlflow==2.8.1
+  - numpy==1.26.2
+  - tensorflow==2.15.0
+  - seaborn
+  - pandas-datareader
+  - yfinance
+  - scikit-learn
+  - tensorflow
+  - keras
+  - confluent-kafka

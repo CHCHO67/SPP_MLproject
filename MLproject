@@ -1,0 +1,7 @@
+name: Test MLproject
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    command: "python Stock_Price_Prediction.py"
