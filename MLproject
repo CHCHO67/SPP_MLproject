@@ -1,7 +1,16 @@
 name: Test MLproject
 
-conda_env: conda.yaml
+### 1. use conda env ###
+#conda_env: conda.yaml
+
+### 1. use conda env ###
+#python_env: python_env.yaml
+
+### 3. use docker env ###
+docker_env: 
+  image: spp_mlproject
+  volumes: ["./Stock_Price_Prediction.py:/app/Stock_Price_Prediction.py"]
 
 entry_points:
   main:
-    command: "python Stock_Price_Prediction.py"
+    command: "python /app/Stock_Price_Prediction.py"

@@ -1,0 +1,21 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: "spp_for_k8s"
+  namespace: mlflow
+spec:
+  ttlSecondsAfterFinished: 100
+  backoffLimit: 0
+  template:
+    spec:
+      containers:
+      - name: "spp_for_k8s"
+        image: "sail0603/mlproject:1.0"
+        command: ["python /app/Stock_Price_Prediction.py"]
+        #env: ["{appended-env-vars}"]
+        resources:
+          limits:
+            memory: 512Mi
+          requests:
+            memory: 256Mi
+      restartPolicy: Never

@@ -1,0 +1,9 @@
+mlflow
+numpy
+tensorflow
+seaborn
+pandas-datareader
+yfinance
+scikit-learn
+keras
+confluent-kafka

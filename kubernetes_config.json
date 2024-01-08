@@ -1,0 +1,5 @@
+{
+    "kube-context": "SPP_MLproject-for-k8s",
+    "repository-uri": "sail0603/mlproject:1.0",
+    "kube-job-template-path": "./kubernetes_job_template.yaml"
+}
