@@ -1,4 +1,4 @@
-name: Test MLproject
+name: spp-mlproject
 
 ### 1. use conda env ###
 #conda_env: conda.yaml
