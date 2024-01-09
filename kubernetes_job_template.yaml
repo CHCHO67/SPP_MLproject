@@ -10,7 +10,7 @@ spec:
     spec:
       containers:
       - name: "spp_for_k8s"
-        image: "sail0603/mlproject:1.0"
+        image: "sail0603/mlproject:2.0"
         command: ["python /app/Stock_Price_Prediction.py"]
         #env: ["{appended-env-vars}"]
         resources:
