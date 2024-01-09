@@ -189,7 +189,7 @@ def build_improved_LSTM_model_with_MLflow(
         mlflow.keras.log_model(model, model_name, registered_model_name=model_name)
         
         # save the trained model
-        model.save(f"./{model_name}.h5")
+        #model.save(f"./{model_name}.h5")
         
         # Get model's artifact URI
         #model_artifacts_uri = client.get_artifact_uri(run.info.run_id)

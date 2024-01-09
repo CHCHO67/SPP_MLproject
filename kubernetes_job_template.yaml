@@ -5,7 +5,7 @@ metadata:
   namespace: mlflow
 spec:
   ttlSecondsAfterFinished: 100
-  backoffLimit: 0
+  backoffLimit: 3
   template:
     spec:
       containers:
@@ -15,7 +15,7 @@ spec:
         #env: ["{appended-env-vars}"]
         resources:
           limits:
-            memory: 512Mi
+            memory: 4Gi
           requests:
-            memory: 256Mi
+            memory: 2Gi
       restartPolicy: Never
