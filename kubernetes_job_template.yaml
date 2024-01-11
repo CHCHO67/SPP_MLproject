@@ -9,10 +9,14 @@ spec:
   template:
     spec:
       containers:
+      # replaced with MLflow Project name
       - name: "spp_for_k8s"
+        # replaced with URI of Docker image created during Project execution
         image: "sail0603/mlproject:2.0"
+        # replaced with MLflow Project entry point command
         command: ["python /app/Stock_Price_Prediction.py"]
-        #env: ["{appended-env-vars}"]
+        # appended with MLFLOW_TRACKING_URI, MLFLOW_RUN_ID and MLFLOW_EXPERIMENT_ID
+        # env: ["{appended-env-vars}"]
         resources:
           limits:
             memory: 4Gi

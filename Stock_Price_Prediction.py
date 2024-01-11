@@ -1,4 +1,3 @@
-# %%
 import os
 import pandas as pd
 import numpy as np
@@ -29,37 +28,6 @@ from mlflow.tracking import MlflowClient
 
 yf.pdr_override()
 
-# %%
-# 아래 코드는 각 기업 데이터 수집하고 이를 하나의 데이터 프레임으로 합쳐서 분석할 수 있또록 준비하는 것
-# Set up End and Start times for data grab
-"""
-tech_list = ['AAPL', 'GOOG', 'MSFT', 'AMZN']
-
-end = datetime.now()
-start = datetime(end.year - 1, end.month, end.day)
-
-for stock in tech_list:
-    # stock에 대한 전역 변수 생성
-    globals()[stock] = yf.download(stock, start, end)
-    print(type(globals()[stock]))
-    print(globals()[stock])
-
-company_list = [AAPL, GOOG, MSFT, AMZN]
-company_name = ["APPLE", "GOOGLE", "MICROSOFT", "AMAZON"]
-
-for company, com_name in zip(company_list, company_name):
-    company["company_name"] = com_name
-
-df = pd.concat(company_list, axis=0)
-"""
-# df.to_csv('concat_test.csv', index=False)
-# df.shape
-# df.head(10)
-# df.tail(10)
-
-
-# company.head(100)
-# %%
 def make_Dataset(stock_code="AAPL", start_data="2012-01-01", end_date=datetime.now):
     # Define the file path
     file_path = f"{stock_code}_data.csv"
@@ -284,11 +252,10 @@ def save_results(
     # with mlflow.start_run(run_name=run_name, experiment_name=experiment_name) as run:
     #     mlflow.log_artifact("predictions_plot.png")
 
-def pipeline():
+def train_pipeline():
     stock_code = "AAPL"
     start_date = "2012-01-01"
     end_date = datetime.now()
-    flag = 1
 
     scaler, scaled_data, training_data_len, dataset, data = make_Dataset(
         stock_code, start_date, end_date
@@ -310,4 +277,4 @@ def pipeline():
     # print("plot_results - success!!")
 
 if __name__ == "__main__":
-    pipeline()
+    train_pipeline()
