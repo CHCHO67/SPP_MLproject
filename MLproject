@@ -11,14 +11,13 @@ docker_env:
   image: sail0603/mlproject:2.0
   volumes: ["./Stock_Price_Prediction.py:/app/Stock_Price_Prediction.py"]
   # 필요시 환경 변수 설정
-  ''' 
+  
   # example
-  environment:
-    - ["API_KEY", "your_api_key_here"]
-    - ["DATABASE_URL", "your_database_url_here"]
-    - "VAR_TO_COPY_FROM_HOST_ENVIRONMENT" # 호스트에 설정된 환경 변수를 동일한 이름과 값으로 사용
-  '''
-
+  # environment:
+  #   - ["API_KEY", "your_api_key_here"]
+  #   - ["DATABASE_URL", "your_database_url_here"]
+  #   - "VAR_TO_COPY_FROM_HOST_ENVIRONMENT" # 호스트에 설정된 환경 변수를 동일한 이름과 값으로 사용
+  
 entry_points:
   main:
     command: "python /app/Stock_Price_Prediction.py"
